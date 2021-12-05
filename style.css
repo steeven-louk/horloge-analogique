@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #aaa;
+}
+
+.title{
+    letter-spacing: 5px;
+    font-size: 40px;
+    padding: 15px;
+    border: 1px double transparent;
+    color: #fff;
+    background: #ccc;
+    text-align: center;
+    margin-top:45px;
+    width:auto;
+}
+
+#horloge{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+#clock{
+    position: relative!important;
+    background: url(./img/clock.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 455px;
+    width: 455px;
+}
+
+#heures, #minutes, #secondes{
+    position: absolute !important;
+    margin: auto;
+    top: 21.5%;
+    right: 47.5%;
+    transform-origin: 54% 86%;
+    transform: rotate(0deg);
+    z-index: 22;
+}
+
+#minutes{
+    position: absolute !important;
+    margin: auto;
+    top: 9.5%;
+    right: 47.5%;
+    transform-origin: 55% 93%;
+    transform: rotate(5deg);
+    z-index: 21;
+}
+
+#secondes{
+    position: absolute !important;
+    margin: auto;
+    top: 2.5%;
+    right: 47.5%;
+    transform-origin: 50.5% 81.3%;
+    transform: rotate(0deg);
+    z-index: 0;
+}
+
+.numeric{
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    right: 0;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: larger;
+    padding: 5px;
+    border: 2px solid #000;
+    width: fit-content;
+    background: #acac;
+}
+
+#center{
+    position: absolute;
+    top: 46.5%;
+    left: 47.9%;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 50%;
+    z-index: 1000;
+    background: #000;
+    animation: rotate 5s infinite;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+#center::after{
+    content: "";
+    position: inherit;
+    background: #fff;
+    width: 5px;
+    height: 5px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-left: 10px;
+    
+}
