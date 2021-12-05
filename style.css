@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    transition: .4s all ease;
 }
 
 body{
@@ -36,6 +37,7 @@ body{
     width: 455px;
 }
 
+
 #heures, #minutes, #secondes{
     position: absolute !important;
     margin: auto;
@@ -62,7 +64,6 @@ body{
     top: 2.5%;
     right: 47.5%;
     transform-origin: 50.5% 81.3%;
-    transform: rotate(0deg);
     z-index: 0;
 }
 
@@ -82,7 +83,7 @@ body{
 
 #center{
     position: absolute;
-    top: 46.5%;
+    top: 46.9%;
     left: 47.9%;
     right: 0;
     width: 25px;
